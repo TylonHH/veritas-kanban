@@ -58,11 +58,9 @@ const TYPE_COLORS: Record<ObservationType, string> = {
 
 function ObservationItem({
   observation,
-  taskId,
   onDelete,
 }: {
   observation: Observation;
-  taskId: string;
   onDelete: (observationId: string) => Promise<void>;
 }) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -260,7 +258,6 @@ export function ObservationsSection({
             <ObservationItem
               key={obs.id}
               observation={obs}
-              taskId={task.id}
               onDelete={onDeleteObservation}
             />
           ))}
