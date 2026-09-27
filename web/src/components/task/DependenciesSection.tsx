@@ -21,7 +21,7 @@ interface DependenciesSectionProps {
   onBlockedByChange: (blockedBy: string[] | undefined) => void;
 }
 
-export function DependenciesSection({ task, onBlockedByChange }: DependenciesSectionProps) {
+export function DependenciesSection({ task }: DependenciesSectionProps) {
   const { data: allTasks } = useTasks();
   const [isAddingDependsOn, setIsAddingDependsOn] = useState(false);
   const [isAddingBlocks, setIsAddingBlocks] = useState(false);
