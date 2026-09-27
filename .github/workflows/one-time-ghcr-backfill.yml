@@ -1,5 +1,5 @@
 name: One-time GHCR image backfill
-# Retry after repairing server TypeScript build errors.
+# Retry after repairing server and web TypeScript build errors.
 on:
   push:
     branches: [main]
